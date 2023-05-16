@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 function Register()
 {
   const[password,setpassword]=useState("");
@@ -50,7 +51,8 @@ function Register()
                             <button type="submit" className="btn btn-primary btn-block" onClick={register} >Sign UP</button>
                           </div>
                       </div>
-                     
+                      <p>After registering login in the login page</p>
+                      <div className="form-group px-5"> <Link to="/login" className="colours">Login</Link> </div>
               </div>
             </div>
             
