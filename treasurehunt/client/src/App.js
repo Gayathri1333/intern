@@ -20,7 +20,7 @@ function App() {
         <ScrollToTop/>
         <Switch>
           {/* <Mapper/> */}
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app" component={Home}/>
+          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/" component={Home}/>
           <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user" component={AdminHome}/>
           <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/register" component={Register}/>
           <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/login" component={Login}/>
