@@ -31,7 +31,7 @@ function Register()
                       <img src={require("./treasure.jpg")} width="200" height="300" className="center"/>
                   
                       <div className="form-group px-5 colours"> 
-                        <input type="text" className="form-control" name="name" placeholder=""email
+                        <input type="text" className="form-control" name="name" placeholder="email"
                         onChange={(e)=>{
                           setemail(e.target.value);}} 
                           required/>
