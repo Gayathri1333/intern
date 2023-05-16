@@ -7,7 +7,7 @@ function GameCard3() {
       <img className="card-img-top" src={sevenwonders} alt="seven wonders" />
       <div className="card-body">
         <h4 className="card-title">Seven Wonders</h4>
-        <Link to="/home/sevenwonders" className="stretched-link"></Link>
+        <Link to="/https://tubular-babka-2e3dc7.netlify.app/user/sevenwonders" className="stretched-link"></Link>
       
       </div>
     </div>
