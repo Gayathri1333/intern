@@ -7,7 +7,7 @@ function GameCard(props) {
         <img className="card-img-top" src="https://wallpapercave.com/wp/wp4363477.jpg" alt="hr" />
         <div className="card-body">
           <h4 className="card-title">Treasure Hunt</h4>
-          <Link to="/https://tubular-babka-2e3dc7.netlify.app/user/games" className="stretched-link"></Link>
+          <Link to="/home/games" className="stretched-link"></Link>
         
         </div>
       </div>

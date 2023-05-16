@@ -20,17 +20,17 @@ function App() {
         <ScrollToTop/>
         <Switch>
           {/* <Mapper/> */}
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/" component={Home}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user" component={AdminHome}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/register" component={Register}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/login" component={Login}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user/games" component={CardEvent}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user/schoollife" component={Image1}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user/sweethome" component={Image2}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path="/home/user" component={AdminHome}/>
+          <Route exact path="/register" component={Register}/>
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/home/games" component={CardEvent}/>
+          <Route exact path="/home/schoollife" component={Image1}/>
+          <Route exact path="/home/sweethome" component={Image2}/>
           <Route exact path="/allclues" component={ClueEvents}/>
           <Route exact path="/clue/:id" component={ClueCard}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/user/sevenwonders" component={Image3}/>
-          <Route exact path="/https://tubular-babka-2e3dc7.netlify.app/forget" component={Forget}/>
+          <Route exact path="/home/sevenwonders" component={Image3}/>
+          <Route exact path="/forget" component={Forget}/>
           <Route component={NotFound} />
         </Switch>
     </BrowserRouter>
