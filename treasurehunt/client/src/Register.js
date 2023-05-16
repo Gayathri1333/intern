@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 function Register()
 {
-  const[username,setusername]=useState("");
   const[password,setpassword]=useState("");
+  const[email,setemail]=useState("");
 
     const register = () =>{
    
       axios.post('http://localhost:3001/register',{
-        username:username,
+        email:email,
         password:password,
+
       }).then(()=>{
         console.log("success");
        
@@ -29,14 +30,12 @@ function Register()
                       <h4 className="text-center">Registration Form</h4>
                       <img src={require("./treasure.jpg")} width="200" height="300" className="center"/>
                   
-                      
                       <div className="form-group px-5 colours"> 
-                        <input type="text" className="form-control" name="name" placeholder="User Name"
+                        <input type="text" className="form-control" name="name" placeholder=""email
                         onChange={(e)=>{
-                          setusername(e.target.value);}} 
+                          setemail(e.target.value);}} 
                           required/>
                       </div>  
-  
   
                       <div className="form-group px-5 colours">
                          <input type="password" className="form-control" name="pwd" placeholder="Password" 

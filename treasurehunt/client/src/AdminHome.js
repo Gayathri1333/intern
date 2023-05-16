@@ -1,12 +1,15 @@
-import GameEvent from './GameEvent';
+import AdminGameEvent from './AdminGameEvent';
 import AdminHomePage from './AdminHomePage';
 import Navigation from './Navigation';
+import Details from './Details';
+import UserNavigation from './UserNavigation';
 function AdminHome() {
   return (
     <div>
-        <Navigation/>
+        <UserNavigation/>
         <AdminHomePage/>
-        <GameEvent/>
+        <AdminGameEvent/>
+        <Details/>
     </div>
   );
 }

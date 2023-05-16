@@ -6,7 +6,6 @@ function Home() {
     <div>
         <Navigation/>
         <HomePage/>
-        <GameEvent/>
     </div>
   );
 }

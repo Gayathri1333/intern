@@ -76,3 +76,9 @@
   left:5px;
 
 }
+.user{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: aqua;
+}

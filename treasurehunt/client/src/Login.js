@@ -6,27 +6,27 @@ import {useHistory} from "react-router-dom";
 function Login()
 {
   let history=useHistory();
-  const[username,setusername] = useState("");
   const[password,setpassword] = useState("");
+  const[email,setemail]=useState("");
   const[loginstatus,setloginstatus] = useState("");
 
   const validation = () =>{
    
     axios.post('http://localhost:3001/validate',{
-      username:username,
       password:password,
+      email:email,
     }).then((response)=>{
       if(response.data.message){
         setloginstatus(response.data.message)
       }
-      // else if(response.data[0].username==="superadmin" && response.data[0].password==="superadmin" ){
-      //   setloginstatus(response.data[0].username);
-      //   history.push('/superadmin')
-      // }
+      else if(response.data[0].email!=="gayathripabbisetty2003@gmail.com"){
+        setloginstatus(response.data.email);
+        history.push("/user")
+      }
       else{
       
         setloginstatus(response.data[0].username);
-        history.push('/user')
+        history.push('/admin')
       }
     });
   }; 
@@ -43,11 +43,9 @@ function Login()
               <div className="card shadow h-100">
                       <img src={require("./treasure.jpg")} width="200" alt="" height="300" className="center"/>
                       <div className="px-5 text-center #dc3545"></div>
-                      
                       <div className="form-group px-5 colours"> 
-                        <input type="text" className="form-control" name="name" placeholder="User Name"  onChange={(e)=>{
-                             setusername(e.target.value);}}
-                        required/>
+                        <input type="text" className="form-control" name="name" placeholder="Enter Email"  onChange={(e)=>{
+                             setemail(e.target.value);}} required/>
                       </div> 
                       <div className="px-5 text-center #dc3545">{loginstatus}</div>
                       <div className="form-group px-5 colours">

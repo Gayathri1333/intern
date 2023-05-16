@@ -14,11 +14,11 @@ const db = mysql.createConnection({
 });
 app.post('/register',(req,res) => {
     console.log(req.body);
-    const username=req.body.username;
+    const email=req.body.email;
     const password=req.body.password;
     console.log(req.body);
-    db.query('INSERT INTO register (username,password)VALUES (?,?)',
-    [username,password],
+    db.query('INSERT INTO register (email,password)VALUES (?,?)',
+    [email,password],
     (err,result) =>{
         if(err){
             console.log(err);
@@ -47,12 +47,12 @@ app.get("/getClues",(req,res)=>{
     });
 });
 app.post('/validate',(req,res)=>{
-    const username = req.body.username; 
+    const email = req.body.email; 
     const password = req.body.password;
 
 
-    db.query("SELECT * FROM register WHERE username = ? AND password = ?",
-    [username,password],
+    db.query("SELECT * FROM register WHERE email = ? AND password = ?",
+    [email,password],
     (err,result)=>{
         if(err){
             res.send({err: err});
@@ -60,7 +60,7 @@ app.post('/validate',(req,res)=>{
         else if(result.length>0 ) {
             res.send(result);
         } else{
-            res.send({message: "Wrong username/password combination"});
+            res.send({message: "Wrong email/password combination"});
 
         }
     });
